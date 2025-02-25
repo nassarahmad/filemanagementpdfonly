@@ -71,6 +71,9 @@ router.delete('/delete', async (req, res) => {
 });
 
 // Append to file (Disabled for PDFs) not supported
-
+router.post('/append', async (req, res) => {
+  res.status(400).json({ error: 'Appending content to PDF files is not supported' });
+});
+// i am tried but not working because it is not supported and i asked ai for that he telled me not supported
 
 module.exports = router;
